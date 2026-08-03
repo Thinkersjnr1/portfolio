@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block title %}About — Daniel Yewenu{% endblock %}
+
+{% block content %}
+<section class="section about-hero" style="border-bottom: none; padding-top: 64px;">
+  <div class="bio">
+    <p class="eyebrow">About</p>
+    <h2 class="section-heading">Background</h2>
+    <p>
+      I'm a cybersecurity professional based in Lagos, Nigeria, graduating December 2026. My work
+      spans network defense and detection engineering, offensive security, and applied security
+      research — I'm as interested in configuring a firewall correctly as I am in trying to get
+      past one, or exploring where AI intersects with both.
+    </p>
+    <p>
+      Most of what I know, I've learned by building it myself: standing up a segmented Zero
+      Trust network from scratch, wiring a SIEM to actually catch what it's supposed to catch,
+      and running real attacks against my own infrastructure to see if the defenses hold. That's
+      alongside hands-on internship experience across VAPT, network security, and SOC operations —
+      see <a href="/experience" style="color: var(--accent); text-decoration: underline;">Experience</a>
+      for the details.
+    </p>
+    <p>
+      Currently applying for cybersecurity internships and roles — open to remote, Lagos-based,
+      or relocation opportunities.
+    </p>
+  </div>
+  <figure class="id-panel">
+    <img src="{{ url_for('static', filename='img/headshot.jpg') }}" alt="Portrait of Daniel Yewenu">
+    <figcaption>
+      <span class="tb-label">Subject</span>
+      <span class="tb-value">D. YEWENU</span>
+    </figcaption>
+  </figure>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Toolkit</p>
+  <h2 class="section-heading">Skills &amp; technologies</h2>
+  <div class="skills-table">
+    {% for category, items in skills.items() %}
+    <div class="skills-row">
+      <div class="cat">{{ category }}</div>
+      <div class="items">{{ items|join(' · ') }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

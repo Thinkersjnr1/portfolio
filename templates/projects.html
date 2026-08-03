@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Projects — Daniel Yewenu{% endblock %}
+
+{% block content %}
+<section class="section" style="border-bottom: none; padding-top: 64px;">
+  <p class="eyebrow">Selected work</p>
+  <h2 class="section-heading">Projects</h2>
+  <div class="project-grid">
+    {% for p in projects %}
+    <article class="project-card">
+      <div class="card-head">
+        <span>{{ "%02d"|format(loop.index) }}</span>
+        <span>{{ p.status }}</span>
+      </div>
+      <h3>{{ p.name }}</h3>
+      <p class="full-name">{{ p.full_name }}</p>
+      <p>{{ p.summary }}</p>
+      <div class="stack-tags">
+        {% for tech in p.stack %}<span>{{ tech }}</span>{% endfor %}
+      </div>
+      <a href="{{ p.link }}" class="card-link" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

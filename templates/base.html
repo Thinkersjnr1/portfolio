@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Daniel Yewenu — Cybersecurity Engineer{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+  <div class="blueprint-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a href="/" class="brand">
+      <span class="brand-mark">DY</span>
+      <span class="brand-text">D.&nbsp;YEWENU</span>
+    </a>
+    <div class="header-right">
+      <nav class="site-nav">
+        <a href="/" class="{{ 'active' if request.path == '/' }}">Home</a>
+        <a href="/about" class="{{ 'active' if request.path == '/about' }}">About</a>
+        <a href="/experience" class="{{ 'active' if request.path == '/experience' }}">Experience</a>
+        <a href="/credentials" class="{{ 'active' if request.path == '/credentials' }}">Credentials</a>
+        <a href="/projects" class="{{ 'active' if request.path == '/projects' }}">Projects</a>
+        <a href="/contact" class="{{ 'active' if request.path == '/contact' }}">Contact</a>
+      </nav>
+      <a href="{{ url_for('static', filename='resume/Daniel-Yewenu-Resume.pdf') }}" download class="btn btn-primary resume-btn">Download Résumé</a>
+    </div>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="title-block">
+    <div class="tb-cell tb-name">
+      <span class="tb-label">Name</span>
+      <span class="tb-value">D. YEWENU</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Focus</span>
+      <span class="tb-value">Cybersecurity</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Status</span>
+      <span class="tb-value">Open to work</span>
+    </div>
+    <div class="tb-cell">
+      <span class="tb-label">Updated</span>
+      <span class="tb-value">Aug 2026</span>
+    </div>
+    <div class="tb-cell tb-location">
+      <span class="tb-label">Location</span>
+      <span class="tb-value">Lagos, NG</span>
+    </div>
+  </footer>
+
+</body>
+</html>

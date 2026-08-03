@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Experience — Daniel Yewenu{% endblock %}
+
+{% block content %}
+<section class="section" style="border-bottom: none; padding-top: 64px;">
+  <p class="eyebrow">Work history</p>
+  <h2 class="section-heading">Experience</h2>
+
+  {% for job in experience %}
+  <div class="exp-entry">
+    <div class="exp-head">
+      <h3>{{ job.role }}</h3>
+      <span class="exp-period">{{ job.period }}</span>
+    </div>
+    <p class="exp-org">{{ job.org }} — {{ job.location }}</p>
+    <ul>
+      {% for point in job.points %}
+      <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+</section>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Daniel Yewenu — Network & Security Engineering{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="eyebrow">Cybersecurity Engineer</p>
+    <h1>Daniel Yewenu — I build systems that <span class="accent-word">defend themselves</span>, then try to break them.</h1>
+    <p class="lede">
+      Cybersecurity professional based in Lagos, Nigeria, with hands-on internship experience
+      across penetration testing, SOC operations, and SIEM engineering. Currently building
+      ENSOP, a self-hosted Zero Trust lab with a full detection stack. Graduating December 2026.
+    </p>
+    <div class="hero-actions">
+      <a href="/projects" class="btn btn-primary">View projects</a>
+      <a href="/contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+  </div>
+
+  <figure class="id-panel hero-id-panel">
+    <img src="{{ url_for('static', filename='img/headshot.jpg') }}" alt="Portrait of Daniel Yewenu">
+    <figcaption>
+      <span class="tb-label">Subject</span>
+      <span class="tb-value">D. YEWENU</span>
+    </figcaption>
+  </figure>
+</section>
+
+<section class="section">
+  <p class="eyebrow">Featured work</p>
+  <h2 class="section-heading">Selected projects</h2>
+  <div class="project-grid">
+    {% for p in projects %}
+    <article class="project-card">
+      <div class="card-head">
+        <span>{{ "%02d"|format(loop.index) }}</span>
+        <span>{{ p.status }}</span>
+      </div>
+      <h3>{{ p.name }}</h3>
+      <p class="full-name">{{ p.full_name }}</p>
+      <p>{{ p.summary }}</p>
+      <div class="stack-tags">
+        {% for tech in p.stack %}<span>{{ tech }}</span>{% endfor %}
+      </div>
+      <a href="{{ p.link }}" class="card-link" target="_blank" rel="noopener">View on GitHub →</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
