@@ -4,6 +4,21 @@ app = Flask(__name__)
 
 PROJECTS = [
     {
+        "id": "mobile-app-pentest",
+        "name": "Mobile App Security Assessment",
+        "full_name": "Android / API / Cloud Backend Penetration Test",
+        "summary": "Full-scope, authorized security assessment of an early-stage Android application "
+                    "and its API and cloud backend, conducted under signed NDA and agreed rules of "
+                    "engagement. Covered an 8-phase methodology across static APK analysis, live API "
+                    "and authorization testing, source-level code review, local storage inspection, "
+                    "and dependency review. Identified a critical authorization vulnerability exposing "
+                    "user data across accounts, reported and remediated same-day, with 17 total "
+                    "findings documented and 8 positive controls independently verified.",
+        "stack": ["Android", "Burp Suite", "OWASP Top 10", "API Security", "MITRE ATT&CK"],
+        "status": "Client engagement — NDA",
+        "link": None,
+    },
+    {
         "id": "ensop",
         "name": "ENSOP",
         "full_name": "Enterprise Network Security Operations Platform",
@@ -73,13 +88,15 @@ EXPERIENCE = [
         "role": "Cybersecurity Intern",
         "org": "Employment Express Verband LLP",
         "location": "Remote — Lagos State, Nigeria",
-        "period": "Aug 2025 – Present",
+        "period": "Aug 2025 – Aug 2026",
         "points": [
             "Conducted full-scope VAPT on partner projects including CrexBet and LTSU, identifying "
             "critical vulnerabilities across web application and network attack surfaces.",
             "Executed structured penetration tests using Burp Suite, OWASP ZAP, and Nmap, documenting "
             "findings mapped to OWASP Top 10 with CVSS-scored risk ratings.",
             "Delivered pentest reports and security assessments directly to partner stakeholders.",
+            "Supported continuous security improvement through vulnerability triage, retesting, and "
+            "follow-up documentation.",
         ],
     },
     {
@@ -93,6 +110,24 @@ EXPERIENCE = [
             "Performed deep-packet network traffic analysis with Wireshark, detecting unauthorized "
             "port scans and anomalous activity across live network environments.",
             "Designed IDS deployment architectures to strengthen organizational perimeter defenses.",
+        ],
+    },
+    {
+        "role": "Cybersecurity Intern — Job Shadowing 2.0",
+        "org": "Interswitch Group",
+        "location": "Remote — Lagos State, Nigeria",
+        "period": "Apr 2025 – May 2026",
+        "points": [
+            "Selected for Interswitch's Job Shadowing 2.0 program, completing structured sessions on "
+            "personal branding, career strategy, and problem-solving frameworks (root cause analysis, "
+            "fishbone diagrams) facilitated with Human Capital Partners.",
+            "Developed and presented \"CyberSecure Nexora,\" a fintech cybersecurity strategy spanning "
+            "AI-driven fraud detection, Zero Trust architecture, and compliance across DORA, NDPR, "
+            "PCI-DSS, ISO 27001, and GDPR.",
+            "Applied SWOT analysis and the McKinsey 7S framework to assess organizational cybersecurity "
+            "readiness, building a phased 2025–2028 implementation roadmap with defined KPIs.",
+            "Recommended structural improvements including direct CISO-to-CEO reporting, periodic Red "
+            "Team/Blue Team exercises, and a cross-functional Cybersecurity Advisory Board.",
         ],
     },
     {
@@ -110,6 +145,7 @@ EXPERIENCE = [
 ]
 
 CERTIFICATIONS = [
+    {"name": "Certified Computer Forensics Analyst (CCFA)", "issuer": "eSecurity Institute", "date": "Sep 2026", "link": "https://app.esecurityinstitute.com/certificates/iopasljamq"},
     {"name": "Certified Ransomware Protection Officer (CRPO)", "issuer": "EU Cyber Academy", "date": "Dec 2025"},
     {"name": "Securing LLM and NLP APIs", "issuer": "APIsec University", "date": "Jul 2025"},
     {"name": "Building Security into AI", "issuer": "APIsec University", "date": "Jul 2025"},
