@@ -7,7 +7,7 @@ PROJECTS = [
         "id": "mobile-app-pentest",
         "name": "Mobile App Security Assessment",
         "full_name": "Android / API / Cloud Backend Penetration Test",
-        "summary": "Full-scope, authorized security assessment of an early-stage Android application "
+        "summary": "Full-scope, authorized security assessment of an Android application "
                     "and its API and cloud backend, conducted under signed NDA and agreed rules of "
                     "engagement. Covered an 8-phase methodology across static APK analysis, live API "
                     "and authorization testing, source-level code review, local storage inspection, "
@@ -16,7 +16,25 @@ PROJECTS = [
                     "findings documented and 8 positive controls independently verified.",
         "stack": ["Android", "Burp Suite", "OWASP Top 10", "API Security", "MITRE ATT&CK"],
         "status": "Client engagement — NDA",
-        "link": None,
+   },
+   {
+        "id": "adaptive-firewall",
+        "name": "AdaptiveShield",
+        "full_name": "AdaptiveShield — Adaptive Firewall using Deep Q-Network Reinforcement Learning",
+        "summary": "AdaptiveShield is a production-deployable autonomous adaptive firewall powered by "
+                    "a Deep Q-Network (DQN) reinforcement learning agent. Unlike conventional static "
+                    "rule-based firewalls that can only block known threats, AdaptiveShield continuously "
+                    "learns optimal traffic filtering policies through real-time interaction with network "
+                    "traffic — no manual rule updates, no offline retraining required. The system is "
+                    "trained and evaluated on the CICIDS 2017 benchmark dataset — the most widely "
+                    "adopted standardised dataset in intrusion detection research — and deployed via a "
+                    "real-time Python/Flask operational dashboard with live packet classification, "
+                    "attack distribution visualisation, and DQN engine telemetry. Submitted to IEEE "
+                    "NIGERCON 2026 — AdaptiveShield: An End-to-End Adaptive Firewall Using Deep "
+                    "Q-Network Reinforcement Learning.",
+        "stack": ["Python", "Deep Q-Network (DQN)", "Reinforcement Learning", "Flask", "CICIDS 2017"],
+        "status": "Submitted to & Accepted by IEEE NIGERCON 2026",
+        "link": "https://github.com/Thinkersjnr1/ADAPTIVE-FIREWALL-USING-REINFORCEMENT-LEARNING",
     },
     {
         "id": "ensop",
@@ -29,36 +47,6 @@ PROJECTS = [
         "stack": ["pfSense", "Suricata", "Wazuh", "Zeek", "ELK Stack", "Kali Linux", "MITRE ATT&CK"],
         "status": "Active build",
         "link": "https://github.com/Thinkersjnr1/Enterprise-Network-Security-Operations-Platform-ENSOP-",
-    },
-    {
-        "id": "adaptive-firewall",
-        "name": "Adaptive Firewall",
-        "full_name": "Adaptive Firewall using Reinforcement Learning",
-        "summary": "A firewall that learns optimal traffic-filtering policies in real time "
-                    "through trial-and-error interaction, rather than relying on static rules.",
-        "stack": ["Python", "Reinforcement Learning", "Network Security"],
-        "status": "Complete",
-        "link": "https://github.com/Thinkersjnr1/ADAPTIVE-FIREWALL-USING-REINFORCEMENT-LEARNING",
-    },
-    {
-        "id": "siem-dashboard",
-        "name": "SIEM Dashboard",
-        "full_name": "Enterprise SIEM Dashboard with ELK Stack",
-        "summary": "A Security Information and Event Management system built on the open-source "
-                    "Elastic Stack for log ingestion, storage, and visualization.",
-        "stack": ["Elasticsearch", "Logstash", "Kibana"],
-        "status": "Complete",
-        "link": "https://github.com/Thinkersjnr1/Enterprise-SIEM-Dashboard-with-ELK-Stack",
-    },
-    {
-        "id": "web-vuln-scanner",
-        "name": "Web Vuln Scanner",
-        "full_name": "Web Vulnerability Scanner",
-        "summary": "Python web app automating vulnerability scanning via OWASP ZAP, with an "
-                    "interactive dashboard and PDF report generation. Deployed live.",
-        "stack": ["Python", "OWASP ZAP", "Kali Linux"],
-        "status": "Complete — live demo",
-        "link": "https://github.com/Thinkersjnr1/web_vuln_scanner",
     },
     {
         "id": "nids",
@@ -84,11 +72,29 @@ PROJECTS = [
 ]
 
 EXPERIENCE = [
+    { 
+        "role": "Cybersecurity Intern — Job Shadowing 2.0",
+        "org": "Interswitch Group",
+        "location": "Remote — Lagos State, Nigeria",
+        "period": "Apr 2025 – May 2026",
+        "points": [
+            "Selected for Interswitch's Job Shadowing 2.0 program, completing structured sessions on "
+            "personal branding, career strategy, and problem-solving frameworks (root cause analysis, "
+            "fishbone diagrams) facilitated with Human Capital Partners.",
+            "Developed and presented \"CyberSecure Nexora,\" a fintech cybersecurity strategy spanning "
+            "AI-driven fraud detection, Zero Trust architecture, and compliance across DORA, NDPR, "
+            "PCI-DSS, ISO 27001, and GDPR.",
+            "Applied SWOT analysis and the McKinsey 7S framework to assess organizational cybersecurity "
+            "readiness, building a phased 2025–2028 implementation roadmap with defined KPIs.",
+            "Recommended structural improvements including direct CISO-to-CEO reporting, periodic Red "
+            "Team/Blue Team exercises, and a cross-functional Cybersecurity Advisory Board.",
+        ],
+    },
     {
         "role": "Cybersecurity Intern",
         "org": "Employment Express Verband LLP",
         "location": "Remote — Lagos State, Nigeria",
-        "period": "Aug 2025 – Aug 2026",
+        "period": "Aug 2025 – Nov 2025",
         "points": [
             "Conducted full-scope VAPT on partner projects including CrexBet and LTSU, identifying "
             "critical vulnerabilities across web application and network attack surfaces.",
@@ -110,24 +116,6 @@ EXPERIENCE = [
             "Performed deep-packet network traffic analysis with Wireshark, detecting unauthorized "
             "port scans and anomalous activity across live network environments.",
             "Designed IDS deployment architectures to strengthen organizational perimeter defenses.",
-        ],
-    },
-    {
-        "role": "Cybersecurity Intern — Job Shadowing 2.0",
-        "org": "Interswitch Group",
-        "location": "Remote — Lagos State, Nigeria",
-        "period": "Apr 2025 – May 2026",
-        "points": [
-            "Selected for Interswitch's Job Shadowing 2.0 program, completing structured sessions on "
-            "personal branding, career strategy, and problem-solving frameworks (root cause analysis, "
-            "fishbone diagrams) facilitated with Human Capital Partners.",
-            "Developed and presented \"CyberSecure Nexora,\" a fintech cybersecurity strategy spanning "
-            "AI-driven fraud detection, Zero Trust architecture, and compliance across DORA, NDPR, "
-            "PCI-DSS, ISO 27001, and GDPR.",
-            "Applied SWOT analysis and the McKinsey 7S framework to assess organizational cybersecurity "
-            "readiness, building a phased 2025–2028 implementation roadmap with defined KPIs.",
-            "Recommended structural improvements including direct CISO-to-CEO reporting, periodic Red "
-            "Team/Blue Team exercises, and a cross-functional Cybersecurity Advisory Board.",
         ],
     },
     {
