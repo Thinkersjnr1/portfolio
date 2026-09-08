@@ -15,7 +15,7 @@ PROJECTS = [
                     "user data across accounts, reported and remediated same-day, with 17 total "
                     "findings documented and 8 positive controls independently verified.",
         "stack": ["Android", "Burp Suite", "OWASP Top 10", "API Security", "MITRE ATT&CK"],
-        "status": "Client engagement — NDA",
+        "status": "Client engagement NDA",
    },
    {
         "id": "adaptive-firewall",
