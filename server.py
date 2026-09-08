@@ -63,7 +63,7 @@ PROJECTS = [
                     "security documentation.",
         "stack": ["Burp Suite", "OWASP ZAP", "Nmap", "OWASP Top 10", "CVSS", "VAPT"],
         "status": "Professional security engagements",
-        "link": "https://github.com/Thinkersjnr1/web-application-penetration-testing,
+        "link": "https://github.com/Thinkersjnr1/web-application-penetration-testing",
     },
     {
         "id": "nids",
