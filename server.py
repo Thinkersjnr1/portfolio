@@ -49,6 +49,23 @@ PROJECTS = [
         "link": "https://github.com/Thinkersjnr1/Enterprise-Network-Security-Operations-Platform-ENSOP-",
     },
     {
+        "id": "vapt",
+        "name": "Vulnerability Assessment & Penetration Testing",
+        "full_name": "Web Application / Network / VAPT Security Assessment",
+        "summary": "Conducted full-scope Vulnerability Assessment and Penetration Testing (VAPT) "
+                    "engagements across partner projects including CrexBet and LTSU, identifying "
+                    "critical vulnerabilities across web application and network attack surfaces. "
+                    "Executed structured penetration tests using Burp Suite, OWASP ZAP, and Nmap, "
+                    "documenting findings against the OWASP Top 10 with CVSS-based risk ratings. "
+                    "Delivered comprehensive penetration-testing reports and security assessments "
+                    "directly to partner stakeholders, while supporting continuous security improvement "
+                    "through vulnerability triage, remediation validation, retesting, and follow-up "
+                    "security documentation.",
+        "stack": ["Burp Suite", "OWASP ZAP", "Nmap", "OWASP Top 10", "CVSS", "VAPT"],
+        "status": "Professional security engagements",
+        "link": "https://github.com/Thinkersjnr1/web-application-penetration-testing,
+    },
+    {
         "id": "nids",
         "name": "Network Intrusion Detection",
         "full_name": "Simulated Incident Response Exercise",
