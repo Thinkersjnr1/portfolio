@@ -5,22 +5,114 @@
 <section class="section" style="border-bottom: none; padding-top: 64px;">
   <p class="eyebrow">Selected work</p>
   <h2 class="section-heading">Projects</h2>
+
   <div class="project-grid">
+
     {% for p in projects %}
     <article class="project-card">
+
       <div class="card-head">
         <span>{{ "%02d"|format(loop.index) }}</span>
         <span>{{ p.status }}</span>
       </div>
+
       <h3>{{ p.name }}</h3>
+
       <p class="full-name">{{ p.full_name }}</p>
-      <p>{{ p.summary }}</p>
+
+      <!-- Short description shown on the card -->
+      <p class="project-summary">
+        {{ p.summary }}
+      </p>
+
+      <!-- Read More button -->
+      <button
+        type="button"
+        class="read-more-btn"
+        onclick="openProjectModal('{{ p.id }}')">
+        Read More →
+      </button>
+
       <div class="stack-tags">
-        {% for tech in p.stack %}<span>{{ tech }}</span>{% endfor %}
+        {% for tech in p.stack %}
+        <span>{{ tech }}</span>
+        {% endfor %}
       </div>
-      <a href="{{ p.link }}" class="card-link" target="_blank" rel="noopener">View on GitHub →</a>
+
+      <a
+        href="{{ p.link }}"
+        class="card-link"
+        target="_blank"
+        rel="noopener">
+        View on GitHub →
+      </a>
+
     </article>
     {% endfor %}
+
   </div>
 </section>
+
+
+<!-- =======================================================================
+     Project Detail Modals
+     ======================================================================= -->
+
+{% for p in projects %}
+<div
+  id="project-modal-{{ p.id }}"
+  class="project-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="project-title-{{ p.id }}"
+  onclick="closeProjectModalOnBackground(event, '{{ p.id }}')">
+
+  <div class="project-modal-content">
+
+    <div class="project-modal-header">
+
+      <div>
+        <h3 id="project-title-{{ p.id }}">
+          {{ p.name }}
+        </h3>
+
+        <p class="project-modal-full-name">
+          {{ p.full_name }}
+        </p>
+      </div>
+
+      <button
+        type="button"
+        class="project-modal-close"
+        onclick="closeProjectModal('{{ p.id }}')"
+        aria-label="Close project details">
+        ×
+      </button>
+
+    </div>
+
+    <p class="project-modal-description">
+      {{ p.summary }}
+    </p>
+
+    <div class="stack-tags">
+      {% for tech in p.stack %}
+      <span>{{ tech }}</span>
+      {% endfor %}
+    </div>
+
+    {% if p.link %}
+    <a
+      href="{{ p.link }}"
+      class="project-modal-github"
+      target="_blank"
+      rel="noopener">
+      View Project on GitHub →
+    </a>
+    {% endif %}
+
+  </div>
+</div>
+{% endfor %}
+
 {% endblock %}
